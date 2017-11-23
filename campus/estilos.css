@@ -1,0 +1,230 @@
+
+.modal{
+	display: none;
+}
+
+
+body{
+	background: #3F7799;
+	margin:0px;
+	padding: 0px;
+	width: 100%;
+	height: auto;
+}
+.main{
+	width: 100%;
+	
+	height: auto;
+
+	background: #3F7799;
+	margin: 0 auto;
+
+}
+.banner{
+
+	overflow: hidden;
+
+	width: 100%;
+	height: auto;
+	background: #ed9100;
+	margin-bottom: 30px;
+}
+	
+.banner nav{
+	height: auto;
+	width: 100%;
+}
+
+.banner nav ul {
+	display: flex;
+	list-style: none;
+	margin:0;
+	justify-content: flex-end;
+}
+
+
+
+ .banner nav ul .liBusq{
+ 	width: auto;
+    background-color: rgba(0,0,0,0);
+    margin: 5px;
+    padding: 6px;
+    border-radius: 8px;
+
+ }
+ 
+  .banner nav ul .liBusq a{
+  	color: white;
+  	font-size: 20px;
+  	font-family: monospace;
+    text-decoration: none;
+  }
+  
+.L-Soc{
+	display: none;
+}
+
+li#busq {
+    padding: 11px;}
+
+.banner nav ul .liBusq:hover {
+	background: #3a7999;
+    transition: 0.8s;
+}
+
+.banner nav ul li .subUl{
+	display: none;
+}
+
+.banner nav ul .liBusq:hover .subUl{
+	display: flex;
+    padding: 0px;
+    position: absolute;
+    background-color: #3a7999;
+    border-radius: 9px;
+    margin-left: -6px;
+    margin-top: 8px;
+    overflow:hidden;
+}
+.banner nav ul .liBusq .subUl a{
+	color: white;
+	width: 100%;
+	display: block;
+}
+
+.banner nav ul li .subUl li{
+	padding: 10px;
+	text-align:center;
+	}
+
+.banner nav ul li .subUl li:hover{
+		box-sizing: border-box;
+		background-color: rgba(255,255,255,0.5);
+	}
+
+#btn-menu{
+	display:none;
+}
+header{
+	background: #58A3BC;
+	height: auto;
+	width: 100%;
+	box-sizing: border-box;
+}
+header label{
+    width: 60px;
+    height: 40px;
+    padding: 10px;
+    display: none;
+}
+
+header label span{
+	color:#3F7799;
+	font-size:50px;
+}
+
+
+
+.redes{
+	position: fixed;
+	width: 40px;
+	height: 180px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-left: 0.5%;
+}
+.redes a{
+	text-decoration: none;
+}
+.redes>div ,.L-Soc>div{
+	border-radius:30px;
+	padding: 10px;
+	margin-bottom: 6px;
+	background-color: white;
+}
+.redes>div:hover{
+	-webkit-animation: tiembla 0.9s infinite;
+}
+@-webkit-keyframes tiembla{
+	0%  { -webkit-transform:rotateZ(-5deg); }
+	50% { -webkit-transform:rotateZ( 0deg) scale(.8); }
+	100%{ -webkit-transform:rotateZ( 5deg); }
+}
+
+.banner .posNomb{
+	width: 100%;
+	height: auto;
+	margin: 4% auto;
+}
+.banner .posNomb .imgLogo{
+	width: 310px;
+	margin: 0 auto;
+}
+
+
+.frace{
+    width: 500px;
+    height: auto;
+    margin:0 auto;
+}
+.trayecto , .fechas{
+	display: flex;
+	justify-content: space-around;
+}
+
+.trayecto> input , .fechas> input {
+	margin: 3px;
+    width: 40%;
+    padding: 0px;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+}
+.enviar{
+	height: auto;
+    width: 14%;
+    margin: 0 auto;
+}
+.enviar input{
+	width: 100%;
+	margin: 3px;
+    border-radius: 8px;
+}
+
+
+/*↑↑↑ codigo de top.php ↑↑↑*/
+
+/*↓↓↓ pie de pagina ↓↓↓*/
+footer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    background: #EFECF2;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+footer .tarj-dos,footer .tarj-uno{
+	display: flex;
+}
+
+footer .contacto{
+    width: 300px;
+    height: auto;
+    margin-left: 160px;
+	}
+
+footer .tarjeta{
+	width: 118px;
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ /*↑↑↑ codigo pie pag ↑↑↑*/
+
+ 
