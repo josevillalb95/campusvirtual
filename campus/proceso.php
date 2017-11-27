@@ -15,8 +15,11 @@ if (isset($_POST['nombre'])&& isset($_POST['apellido'])) {
 		$email=filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 		$contra=filter_var(md5($_POST['contra']), FILTER_SANITIZE_STRING);
 		$tipo=filter_var($_POST['tipo'], FILTER_SANITIZE_STRING);
-		$nivel=filter_var($_POST['nivel'], FILTER_SANITIZE_STRING);
+	
 	}
+	$nivel=filter_var($_POST['nivel'], FILTER_SANITIZE_STRING);
+	$idprofe= $_POST['idprofe'];
+
 $realizar=$_GET['ac'];
 $conexion=mysqli_connect("localhost","root","","c9");
 session_start();
@@ -24,6 +27,7 @@ $id=$_SESSION['id'];
 
 switch ($realizar) {
 	case 1:
+	  
 		$consulta= "INSERT INTO `persona`( `nombre`, `apellido`, `user`, `email`, `contra`, `tipo`,`grado`) VALUES ('$nombre','$apellido','$usuario','$email','$contra','$tipo','$nivel')";
 		mysqli_query($conexion,$consulta);
 		break;
@@ -33,10 +37,27 @@ switch ($realizar) {
 		mysqli_query($conexion,$consulta);
 		break;
 	case 4:
-			$consulta= "INSERT INTO `aula`( `id_aula`, `id_docente`) VALUES ('$nivel','$id')";
+			$aula=$idprofe.$nivel;
+			$consulta= "INSERT INTO `aula`( `id_aula`,`id_docente`,`grado`) VALUES ('$aula','$idprofe','$nivel')";
 			mysqli_query($conexion,$consulta);
+	
+		break;
 		
+	case 5:
+			$idtarea= $_POST['idtarea'];
+			$tarea= $_POST['tarea'];
+			$fecha= $_POST['fecha'];
+			$consulta= "INSERT INTO `tarea`( `tarea`,`id_docente`,`id_respuesta`,`fecha`) VALUES ('$tarea','$id','$idtarea','$fecha')";
+			mysqli_query($conexion,$consulta);
+	
+		break;
 		
+	case 6:
+		$contarea= $_POST['contarea'];
+		$fecha= $_POST['fecha'];
+		$resp= $_POST['resp'];
+		$consulta= "INSERT INTO `respuesta`( `id_usuario`,`id_tarea`,`respuesta`,`fecha`) VALUES ('$id','$contarea','$resp','$fecha')";
+		mysqli_query($conexion,$consulta);
 		break;
 	default:
 		$id= $_GET['id']; 

@@ -11,7 +11,7 @@ session_start();
 	<meta charset="UTF-8">
 	<title>Edukeos</title>
 	<link rel="stylesheet" href="  normalize.css">
-	<link rel="stylesheet" href="  Global.css">
+	<link rel="stylesheet" href="  global.css">
 	<link rel="stylesheet" href=" style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -153,3 +153,5 @@ session_start();
 		<div class="modal" id="modalactualiza" title="Modificar">
 			<?php 	include("actualiza.php");	?>
 		</div>
+	  
+	  

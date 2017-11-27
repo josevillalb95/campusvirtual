@@ -8,12 +8,12 @@
 		<input type="hidden"  name="tipo" value="<?php echo $typede;?>">
 		<label for="nivel">Grado
 			<select id="nivel" name="nivel">
-				  <option value="Primero">1º ESO</option>
-				  <option value="Segundo">2º ESO</option>
-				  <option value="Tercero">3º ESO</option>
-				  <option value="Cuarto">4º ESO</option>
-				  <option value="cinco">1º BAT</option>
-				  <option value="seis">2º BAT</option>
+				  <option value="1ESO">1º ESO</option>
+				  <option value="2ESO">2º ESO</option>
+				  <option value="3ESO">3º ESO</option>
+				  <option value="4ESO">4º ESO</option>
+				  <option value="1BAT">1º BAT</option>
+				  <option value="2BAT">2º BAT</option>
 			</select>
 		</label>
  		<input type="submit" name="enviar" placeholder ="Registrar">
